@@ -1,0 +1,105 @@
+
+1，创建WEB项目
+mvn archetype:generate -DgroupId=com.trs.test -DartifactId=web  -DarchetypeArtifactId=maven-archetype-webapp -Dversion=1.0 
+
+2.编译成eclipse支持的
+mvn eclipse:eclipse
+mvn eclipse:clean eclipse:eclipse
+
+mvn antrun:run -Prefresh-db
+
+mvn clean install -Dmaven.test.skip=true
+
+3.eclipse导入
+
+4.设置eclipse关联本地仓库
+  window---prefrerece---java---buildpath--classpathvir...
+
+5.配置pom
+
+		<plugin>
+			<groupId>org.mortbay.jetty</groupId>
+			<artifactId>maven-jetty-plugin</artifactId>
+			<version>6.1.10</version>
+			<configuration>
+				<scanIntervalSeconds>2</scanIntervalSeconds>
+				<stopKey>foo</stopKey>
+				<!-- 
+				<connectors>
+            		<connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+              			<port>8080</port>
+              			<maxIdleTime>60000</maxIdleTime>
+            		</connector>
+          		</connectors>
+          		-->
+			</configuration>
+			<executions>
+				<execution>
+					<id>start-jetty</id>
+					<phase>pre-integration-test</phase>
+					<goals>
+						<goal>run</goal>
+					</goals>
+					<configuration>
+						<daemon>true</daemon>
+						<reload>manual</reload>
+					</configuration>
+				</execution>
+				<execution>
+					<id>stop-jetty</id>
+					<phase>pre-integration-test</phase>
+					<goals>
+						<goal>stop</goal>
+					</goals>
+				</execution>
+			</executions>
+		</plugin>
+
+加入插件。执行mvn jetty:run可以启动默认端口8080
+
+6.若想要jetty嵌入式方式启动(main方法启动)的配置
+
+    <!--core库-->
+    <dependency>  
+        <groupId>org.eclipse.jetty.aggregate</groupId>  
+        <artifactId>jetty-all</artifactId>  
+        <version>8.0.4.v20111024</version>  
+        <type>jar</type>
+        <scope>provided</scope>  
+    </dependency>
+	
+	<!--jetty支持jsp的库-->
+	<dependency>
+		<groupId>org.mortbay.jetty</groupId>
+		<artifactId>jsp-2.1-glassfish</artifactId>
+		<version>2.1.v20100127</version>
+	</dependency>
+            
+	<!--jetty配置 END-->
+
+这样就导入了jetty的核心jar还有对jsp的支持jar
+
+		// Server server = new Server(8080);
+		//
+		// WebAppContext context = new WebAppContext("src/main/webapp",
+		// "/mywebapps");
+		//
+		// server.setHandler(context);
+		//
+		// server.start();
+这样就可以运行启动了
+
+FATAL: Exception initializing page context
+java.lang.VerifyError: (class: org/apache/jasper/runtime/PageContextImpl, method
+: getELResolver signature: ()Ljavax/el/ELResolver;) Incompatible argument to function
+
+Jetty server exiting.java.lang.LinkageError: loader constraint violation in inte
+rface itable initialization: when resolving method "org.apache.jasper.runtime.Js
+pApplicationContextImpl.addELResolver(Ljavax/el/ELResolver;)V" the class loader
+(instance of org/mortbay/jetty/webapp/WebAppClassLoader) of the current class, o
+rg/apache/jasper/runtime/JspApplicationContextImpl, and the class loader (instan
+ce of org/codehaus/plexus/classworlds/realm/ClassRealm) for interface javax/serv
+let/jsp/JspApplicationContext have different Class objects for the type javax/el
+/ELResolver used in the signature
+
+C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\Common Files\Microsoft Shared\Windows Live;C:\Program Files (x86)\PC Connectivity Solution\;D:\app-base\Ruby187\bin;D:\app-base\oracle-base\product\11g\bin;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;%SYSTEMROOT%\System32\WindowsPowerShell\v1.0\;%JAVA_HOME%\bin;D:\shortcuts;C:\Program Files\Dell\DW WLAN Card;D:\Program Files\MySQL\MySQL Server 5.1\bin;D:\Program Files\GraphicsMagick-1.3.12-Q16;C:\Program Files (x86)\Microsoft SQL Server\80\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;D:\Program Files\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;D:\app-base\apache-ant-1.8.1\bin;D:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;D:\app-base\php5.4.0;D:\app-base\php5.4.0\ext;C:\Program Files (x86)\Windows Live\Shared;%M2_HOME%\bin;%Gradle_Home%\bin;C:\strawberry\c\bin;C:\strawberry\perl\bin

@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/oz_style.css"  />
+<script type="text/javascript" src="js/common.js"></script>
+<title>GaiLan</title>
+</head>
+
+<body>
+<div class="alldiv">
+	<div class="topdiv">
+    	<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+        <div class="topmenulist">
+        	<div class="topmenu">
+            	<ul>
+                	<li><a href="favorite.html">My Lightbox</a></li>
+                    <li>|</li>
+                    <li><a href="mycart.html">My Cart</a></li>
+                    <li>|</li>
+                    <li><a href="regist.html">Register</a></li>
+                    <li>|</li>
+                    <li><a href="login.html">Login</a></li>
+                    <li>|</li>
+                    <li><a href="#">Collection site</a></li>
+                </ul>
+            </div>
+          <div class="allsearch">
+            	<form action="search.html">
+                	<div id="div1" class="div1"><input id="suggestinput" name="" type="text" class="inputbg" onkeyup="searchsuggest()" />
+                		<div id="suggest" onblur="hiddendiv()"></div>
+                	</div><div class="div2"><input type="image" src="images/inputbutton.png" /></div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menudiv">
+    	<ul>
+        	<li><a href="index.html">Home</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li class="show"><a href="gailan.html">Event</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Special Topic</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Special Column</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Notice</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Reported</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Users Approximations</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Xinhua Gallery</a></li>
+            <li><img src="images/menuline.png" width="2" height="40" /></li>
+            <li><a href="#">Screen media in Europe</a></li>
+        </ul>
+    </div>
+    
+    <div id="main">
+        <div id="left">
+            <div id="searchbar">
+                <ul>
+                    <li>Search Word:<input type="text" id="searchword" /></li>
+                    <li>Data: from
+                        <input type="text" class="fromto" /> to 
+                        <input type="text" class="fromto" />
+                    </li>
+                    <li>
+                    	<input type="button" value="SEARCH" id="searchbutton" />
+                    </li>
+                </ul>
+        	</div>
+            
+            <div id="title">
+            	<h1>Latest Events</h1>
+            </div>
+            
+            <div id="imagelist">
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1"  onmouseover="mouseOver()" onmouseout="mouseOut()"/><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            	<div id="block" class="block">
+					<div id="img" class="img" align="center"><a href="detail.html"><img src="images/gailan1.png"/></a></div>
+					<div id="operation" class="operation">
+						<input type="button" onclick="goCart(this)" value="Add to cart" class="btn1" onmouseover="mouseOver()" onmouseout="mouseOut()" /><span>|</span>
+	                    <input type="button" value="Add to lightbox" class="btn2" onclick="goFavorite()" onmouseover="mouseOver()" onmouseout="mouseOut()" />
+					</div>
+					<div class="summary"><a href="detail.html"><font>India's new Russian-made Frigate to arrive in Mumbai by end of December</font></a></div>
+				</div>
+            	
+            </div>
+    	 	<div class="jumppage">
+            	<ul>
+            		<li><img src="images/leftwoarrow.png" /></li>
+            		<li><img src="images/leftonearrow.png" /></li>
+            		<li><img src="images/rightonearrow.png" /></li>
+            		<li><img src="images/rightwoarrow.png" /></li>
+            		<li>
+            			<span>28006</span>records <span>934 Page</span> | No.<span>1</span> Page | Jump
+            			<input type="text"/>Page
+            			<img src="images/go.png"/>
+            		</li>
+            	</ul>
+            </div>
+         </div>
+         
+        <div id="right">
+            <div class="rightcontent">
+            	<h1 class="title">Editor Recommend<span>MORE</span></h1>
+            	<ul>
+                	<li><a href="detail.html">China lifts blue alert for cold wave</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">forecast for major Chinese cities, regions</a></li>
+                    <li><a href="detail.html">Weather forecast for world cities -- Dec. 23</a></li>
+                    <li><a href="detail.html">China lifts blue alert for cold wave</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">forecast for major Chinese cities, regions</a></li>
+                    <li><a href="detail.html">Weather forecast for world cities -- Dec. 23</a></li>
+                </ul>
+                
+                <h1 class="title">Best Seller<span>MORE</span></h1>
+            	<ul>
+                	<li><a href="detail.html">China lifts blue alert for cold wave</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">forecast for major Chinese cities, regions</a></li>
+                    <li><a href="detail.html">Weather forecast for world cities -- Dec. 23</a></li>
+                    <li><a href="detail.html">China lifts blue alert for cold wave</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">forecast for major Chinese cities, regions</a></li>
+                    <li><a href="detail.html">Weather forecast for world cities -- Dec. 23</a></li>
+                </ul>
+                
+                <h1 class="title">Top-Viewed<span>MORE</span></h1>
+            	<ul>
+                	<li><a href="detail.html">China lifts blue alert for cold wave</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">forecast for major Chinese cities, regions</a></li>
+                    <li><a href="detail.html">Weather forecast for world cities -- Dec. 23</a></li>
+                    <li><a href="detail.html">China lifts blue alert for cold wave</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">Weather information for Asia-Pacific cities</a></li>
+                    <li><a href="detail.html">forecast for major Chinese cities, regions</a></li>
+                    <li><a href="detail.html">Weather forecast for world cities -- Dec. 23</a></li>
+                </ul>
+            </div>
+        </div>
+   	</div>
+    
+    <div class="copyright">
+    	<div>About us | Contact us | Privacy Policy</div>
+    	2012 The Xinhua Agency. All Rights Reserved.
+    </div>  
+    
+</div>
+</body>
+</html>

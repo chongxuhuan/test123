@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Detail</title>
+	<link href="css/oz_style.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript" src="js/jquery1.5.1.js"></script>
+	<script type="text/javascript">
+		function fontAdd() {
+			var content = $(".content p");
+			var nowFontSize = content.css("font-size");
+			if(parseInt(nowFontSize) < 22) {
+				content.css("font-size", parseInt(nowFontSize) + 1);
+			}
+		}
+		
+		function fontReduce() {
+			var content = $(".content p");
+			var nowFontSize = content.css("font-size");
+			if(parseInt(nowFontSize) > 14) {
+				content.css("font-size", parseInt(nowFontSize) - 1);
+			}
+		}
+	</script>
+	
+	</head>
+
+	<body>
+		<div class="alldiv">
+			<div class="topdiv">
+		    	<div class="logo"><a href="index.html"><img src="images/logo.png" /></a></div>
+		        <div class="topmenulist">
+		        	<div class="topmenu">
+		            	<ul>
+		                	<li><a href="favorite.html">My Lightbox</a></li>
+		                    <li>|</li>
+		                    <li><a href="mycart.html">My Cart</a></li>
+		                    <li>|</li>
+		                    <li><a href="regist.html">Register</a></li>
+		                    <li>|</li>
+		                    <li><a href="login.html">Login</a></li>
+		                    <li>|</li>
+		                    <li><a href="#">Collection site</a></li>
+		                </ul>
+		            </div>
+		            <div class="allsearch">
+		            	<form action="search.html">
+		                	<div id="div1" class="div1"><input id="suggestinput" name="" type="text" class="inputbg" onkeyup="searchsuggest()" />
+                				<div id="suggest" onblur="hiddendiv()"></div>
+		                	</div><div class="div2"><input type="image" src="images/inputbutton.png" /></div>
+		                </form>
+		            </div>
+		        </div>
+		    </div>
+		    
+		    <div class="detailceter">
+		    	<div class="detailmenudiv">
+		    		<ul>
+		    			<li>[<img src="images/print.png" width="15" height="12" onclick="window.print()"/>Print]</li>
+		    			<li>[<a href="javascript:void(0);"><img src="images/minit.png" width="15" height="12" onclick="fontReduce()"/></a>Font Size<a href="javascript:void(0);"><img src="images/plus.png" width="15" onclick="fontAdd()" /></a>]</li>
+		    		</ul>
+		    	</div>
+		    	<div class="detailtopic">
+		    		China's MOC sharply raises estimate for Dec. soybean imports to 6.32 mln t
+		    	</div>
+		    	<div class="detailimg">
+		    		<img src="images/detailimg.png"  width="667";height="385"/>
+		    	</div>
+		    	<div class="detailbutton">
+		    		<div class="optionbutton"><a href="#">Comment</a></div>
+		    		<div class="optionbutton"><a href="favorite.html">Add to lightbox</a></div>
+		    		<div class="optionbutton"><a href="mycart.html">Add to cart</a></div>
+		    	</div>
+		    	<div class="detailcontent">
+		    		<div class="content">
+			    		<p>Now in its second year, the AP-Google Journalism and Technology Scholarship Program is administered by the Online News Association, the world’s largest membership organization of digital journalists.</p><br/>
+			    		<p>The program will award six $20,000 scholarships to undergraduate or graduate students for the 2013-2014 academic year who are pursuing degrees in journalism, computer science and new media. The deadline to apply is Feb. 8, 2013.</p><br/>  
+			    		<p>“The AP-Google scholarship program allows students to delve into projects they otherwise may not be able to pursue,” said Sue Cross, AP’s senior vice president for business development and partner relations in the Americas. “We are excited to support the next generation of digital journalists and create opportunities for them to help shape the future of the news industry.”</p><br/>  
+			    		<p>Scholarship winners are selected by a distinguished team of leaders from across the digital media industry. A key goal of the program is to promote geographic, gender and ethnic diversity, with an emphasis on rural and urban areas.</p><br/>  
+			    		<p>“These scholarship recipients are devising dynamic and innovative ways to tell stories and make information accessible,” said Nilka Thomas, manager of Global Diversity and Talent Inclusion at Google. “We’re proud to support these emerging digital leaders and the diversity of background and experiences that shape their perspectives.”</p><br/>  
+			    		<p>Recipients use their awards to pursue individual projects. Last year’s winners are tackling projects ranging from interactive data visualizations to data-driven hyperlocal reporting to news games. The winners will be blogging about their progress, challenges and achievements on the ONA website (www.journalists.org) and participating in Google Plus hangouts in 2013.</p><br/>  
+			    		<p>The 2012 winners are: John Osborn, University of California, Berkeley; Rebecca Rolfe, Georgia Institute of Technology; Katie Zhu, Northwestern University; Reginald James, University of California, Berkeley; Kevin Schaul, University of Minnesota and Emily Eggleston, University of Wisconsin-Madison. </p>
+		    		</div>
+		    	</div>
+		    </div> 
+		    <div class="detailbutton">
+		    	<div class="optionbutton"><a href="#">Comment</a></div>
+	    		<div class="optionbutton"><a href="favorite.html">Add to lightbox</a></div>
+	    		<div class="optionbutton"><a href="mycart.html">Add to cart</a></div>
+	    	</div>
+		   	<div class="detailrelation">
+				<div class="topic">Related Articles</div>
+			   	<div class="relationcontent">
+			  		<div class="relationleft">
+			   			<a href="detail.html">Popular critic of S. Korea's Lee to be released from jail</a>  [12/24/12 15:52:59]<br/>
+			   			<a href="detail.html">China to amend Land Administration Law</a>  [12/24/12 15:43:08]<br/>
+			   			<a href="detail.html">Benin to protect and promote rights of disabled children</a>  [12/24/12 15:41:35]<br/>
+			   			<a href="detail.html">Feature: Indian PM appeals for peace amid public anger over gangrape</a>  [12/24/12 15:41:25]<br/>
+			   			<a href="detail.html">Ruling upheld in Chinese tycoon's property cases</a>  [12/24/12 15:32:55]
+			   		</div>
+					   	
+			   		<div class="relationright">
+			   			<a href="detail.html">Popular critic of S. Korea's Lee to be released from jail</a>  [12/24/12 15:52:59]</a><br/>
+			   			<a href="detail.html">China to amend Land Administration Law</a> [12/24/12 15:43:08]<br/>
+			   			<a href="detail.html">Benin to protect and promote rights of disabled children</a>  [12/24/12 15:41:35]<br/>
+			   			<a href="detail.html">Feature: Indian PM appeals for peace amid public anger over gangrape</a>  [12/24/12 15:41:25]<br/>
+			   			<a href="detail.html">Ruling upheld in Chinese tycoon's property cases</a>  [12/24/12 15:32:55]
+			   		</div>
+		   		</div>
+		   	</div>
+		    <div class="detailcopyright">
+		    	<div>About us | Contact us | Privacy Policy</div>
+    			2012 The Xinhua Agency. All Rights Reserved.
+		    </div>
+		</div>
+	</body>
+</html>
